@@ -22,4 +22,8 @@ Y = data.iloc[:,1].values
 X_Train,X_Test,Y_Train,Y_Test = train_test_split(X,Y,test_size=0.2,random_state=2)
 Linear = LR()
 Linear.fit(X_Train,Y_Train)
-print(Linear.predict(6))
+userInput = int(input("Enter Your CGPA :"))
+if userInput <=10:
+    print(Linear.predict(userInput))
+else:
+    print("Please! No SGPA Above 10")
